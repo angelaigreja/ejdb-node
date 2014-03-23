@@ -37,7 +37,7 @@
         "nodeunit" : ">=0.7.0"
     },
     "scripts" : {
-        "preinstall" : "node platform.js preinstall",
+        "preinstall" : "git init; git submodule add git://github.com/angelaigreja/ejdb ejdb; rm -rf .git ejdb/.git; node platform.js preinstall",
         "test" : "node platform.js test"
     },
     "bin" : {
